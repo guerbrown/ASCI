@@ -1,2 +1,4 @@
-biopython
-PyQt5
+mamba create -n asci python=3.9
+mamba install conda-forge biopython pyqt
+pip install muscle
+pip install PyQt5
