@@ -6,30 +6,36 @@ from sequence_matcher import find_matching_sequences
 from sequence_aligner import align_sequences
 
 def process_files(input_files):
-    # Find matching sequences
+    print(f"Processing files: {input_files}")
     matching_pairs = find_matching_sequences(input_files)
+    print(f"Matching pairs found: {matching_pairs}")
     
     results = {}
     for pair_number, pair in matching_pairs.items():
+        print(f"Processing pair {pair_number}: {pair}")
         ab1_file_f = pair['F']
         ab1_file_r = pair['R']
         
-        # Convert AB1 to FASTA in memory
-        seq1 = SeqIO.read(ab1_file_f, "abi")
-        seq2 = SeqIO.read(ab1_file_r, "abi")
+        # Convert AB1 to FASTA
+        fasta_file_f = ab1_file_f.replace('.ab1', '.fasta')
+        fasta_file_r = ab1_file_r.replace('.ab1', '.fasta')
+        convert_ab1_to_fasta(ab1_file_f, fasta_file_f)
+        convert_ab1_to_fasta(ab1_file_r, fasta_file_r)
+        
+        # Read sequences
+        seq1 = SeqIO.read(fasta_file_f, "fasta")
+        seq2 = SeqIO.read(fasta_file_r, "fasta")
         
         # Align sequences and generate consensus
         temp_consensus = f"temp_consensus_{pair_number}.fasta"
-        align_sequences(seq1, seq2, temp_consensus)
-        
-        # Read the consensus sequence
-        with open(temp_consensus, "r") as infile:
-            consensus = infile.read()
+        consensus = align_sequences(seq1, seq2, temp_consensus)
         
         # Store the result
-        results[pair_number] = consensus
+        results[pair_number] = str(consensus)
         
-        # Clean up temporary file
+        # Clean up temporary files
+        os.remove(fasta_file_f)
+        os.remove(fasta_file_r)
         os.remove(temp_consensus)
     
     return results
