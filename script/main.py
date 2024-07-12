@@ -1,26 +1,35 @@
 import os
+import yaml
+from Bio import SeqIO
 from ab1_to_fasta import convert_ab1_to_fasta
 from sequence_matcher import find_matching_sequences
 from sequence_aligner import align_sequences
-from Bio import SeqIO
 
-def process_files(input_directory, output_directory):
-    # Convert AB1 to FASTA
-    for file in os.listdir(input_directory):
-        if file.endswith(".ab1"):
-            ab1_file = os.path.join(input_directory, file)
-            fasta_file = os.path.join(output_directory, file.replace(".ab1", ".fasta"))
-            convert_ab1_to_fasta(ab1_file, fasta_file)
-    
+def load_config(config_path):
+    with open(config_path, 'r') as file:
+        return yaml.safe_load(file)
+
+def process_files(config_path):
+    config = load_config(config_path)
+    input_directory = config['input_directory']
+    output_directory = config['output_directory']
+    file_pattern = config['file_pattern']
+
     # Find matching sequences
-    matching_pairs = find_matching_sequences(output_directory)
+    matching_pairs = find_matching_sequences(input_directory, file_pattern)
     
-    # Align sequences and generate consensus
+    # Convert, align sequences and generate consensus
     consensus_file = os.path.join(output_directory, "consensus.fasta")
     with open(consensus_file, "w") as outfile:
         for pair in matching_pairs:
-            seq1 = SeqIO.read(os.path.join(output_directory, pair['F']), "fasta")
-            seq2 = SeqIO.read(os.path.join(output_directory, pair['R']), "fasta")
+            ab1_file_f = os.path.join(input_directory, pair['F'])
+            ab1_file_r = os.path.join(input_directory, pair['R'])
+            
+            # Convert AB1 to FASTA in memory
+            seq1 = SeqIO.read(ab1_file_f, "abi")
+            seq2 = SeqIO.read(ab1_file_r, "abi")
+            
+            # Align sequences and generate consensus
             align_sequences(seq1, seq2, "temp_consensus.fasta")
             
             with open("temp_consensus.fasta", "r") as infile:
@@ -29,5 +38,7 @@ def process_files(input_directory, output_directory):
     os.remove("temp_consensus.fasta")
     return consensus_file
 
-# Usage
-# final_consensus = process_files("input_directory", "output_directory")
+if __name__ == "__main__":
+    config_path = "config.yaml"
+    final_consensus = process_files(config_path)
+    print(f"Consensus file created: {final_consensus}")

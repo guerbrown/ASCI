@@ -3,7 +3,7 @@ import os
 
 def find_matching_sequences(directory):
     files = os.listdir(directory)
-    pattern = r'(\d+)(F|R)\.fasta'
+    pattern = r'.*?(\d+)(F|R).*\.ab1'
     matches = {}
     
     for file in files:
@@ -17,4 +17,4 @@ def find_matching_sequences(directory):
     return [pair for pair in matches.values() if len(pair) == 2]
 
 # Usage
-# matching_pairs = find_matching_sequences("path/to/fasta/files")
+# matching_pairs = find_matching_sequences("path/to/ab1/files")
