@@ -1,3 +1,0 @@
-input_directory: ""
-output_directory: ""
-file_pattern: ".*?(\\d+)(F|R).*\\.ab1"

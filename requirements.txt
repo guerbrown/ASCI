@@ -1,4 +1,11 @@
+# Python Requirements
 mamba create -n asci python=3.9
-mamba install conda-forge biopython pyqt
+mamba install -c conda-forge biopython pyqt
 pip install muscle
 pip install PyQt5
+
+# C++ Installation
+sudo apt install qt5-default qtcreator build-essential
+sudo apt install qtbase5-dev qt5-qmake qttools5-dev-tools
+sudo apt install python3-dev
+pip install pybind11
