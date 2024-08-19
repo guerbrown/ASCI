@@ -1,0 +1,7 @@
+('/home/guerbrown/software/miniforge3/envs/asci/plugins/printsupport',
+ 'PyQt5/Qt/plugins/printsupport',
+ [],
+ 'DATA',
+ [('PyQt5/Qt/plugins/printsupport/libcupsprintersupport.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/printsupport/libcupsprintersupport.so',
+   'DATA')])

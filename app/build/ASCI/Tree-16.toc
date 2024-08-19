@@ -1,0 +1,7 @@
+('/home/guerbrown/software/miniforge3/envs/asci/plugins/gamepads',
+ 'PyQt5/Qt/plugins/gamepads',
+ [],
+ 'DATA',
+ [('PyQt5/Qt/plugins/gamepads/libevdevgamepad.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/gamepads/libevdevgamepad.so',
+   'DATA')])

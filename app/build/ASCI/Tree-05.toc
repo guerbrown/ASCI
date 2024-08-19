@@ -1,0 +1,10 @@
+('/home/guerbrown/software/miniforge3/envs/asci/plugins/sensorgestures',
+ 'PyQt5/Qt/plugins/sensorgestures',
+ [],
+ 'DATA',
+ [('PyQt5/Qt/plugins/sensorgestures/libqtsensorgestures_shakeplugin.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/sensorgestures/libqtsensorgestures_shakeplugin.so',
+   'DATA'),
+  ('PyQt5/Qt/plugins/sensorgestures/libqtsensorgestures_plugin.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/sensorgestures/libqtsensorgestures_plugin.so',
+   'DATA')])

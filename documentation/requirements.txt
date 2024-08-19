@@ -1,0 +1,25 @@
+# Mamba environment setup
+mamba create -n asci python=3.9
+mamba install -c conda-forge biopython pyqt numpy
+
+# Python packages
+pip install muscle PyQt5 pyinstaller
+
+# System dependencies (for Ubuntu/Debian-based systems)
+sudo apt update
+sudo apt install qt5-default qtcreator build-essential
+sudo apt install qtbase5-dev qt5-qmake qttools5-dev-tools
+sudo apt install python3-dev
+sudo apt install libx11-xcb1 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0 libxkbcommon-x11-0
+
+# Additional Python packages
+pip install pybind11
+
+# Mamba environment packages (for reference)
+# Run 'mamba list' to get this information
+# biopython==1.84
+# numpy==2.0.1
+# pyqt==5.15.9
+# python==3.9.19
+# muscle==0.0.4 (via pip)
+# pyinstaller==6.10.0 (via pip)

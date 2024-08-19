@@ -1,0 +1,13 @@
+('/home/guerbrown/software/miniforge3/envs/asci/plugins/bearer',
+ 'PyQt5/Qt/plugins/bearer',
+ [],
+ 'DATA',
+ [('PyQt5/Qt/plugins/bearer/libqgenericbearer.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/bearer/libqgenericbearer.so',
+   'DATA'),
+  ('PyQt5/Qt/plugins/bearer/libqnmbearer.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/bearer/libqnmbearer.so',
+   'DATA'),
+  ('PyQt5/Qt/plugins/bearer/libqconnmanbearer.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/bearer/libqconnmanbearer.so',
+   'DATA')])

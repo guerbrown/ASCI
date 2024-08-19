@@ -1,0 +1,10 @@
+('/home/guerbrown/software/miniforge3/envs/asci/plugins/geometryloaders',
+ 'PyQt5/Qt/plugins/geometryloaders',
+ [],
+ 'DATA',
+ [('PyQt5/Qt/plugins/geometryloaders/libdefaultgeometryloader.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/geometryloaders/libdefaultgeometryloader.so',
+   'DATA'),
+  ('PyQt5/Qt/plugins/geometryloaders/libgltfgeometryloader.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/geometryloaders/libgltfgeometryloader.so',
+   'DATA')])

@@ -1,0 +1,10 @@
+('/home/guerbrown/software/miniforge3/envs/asci/plugins/designer',
+ 'PyQt5/Qt/plugins/designer',
+ [],
+ 'DATA',
+ [('PyQt5/Qt/plugins/designer/libqwebengineview.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/designer/libqwebengineview.so',
+   'DATA'),
+  ('PyQt5/Qt/plugins/designer/libqquickwidget.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/designer/libqquickwidget.so',
+   'DATA')])

@@ -1,0 +1,7 @@
+('/home/guerbrown/software/miniforge3/envs/asci/plugins/renderers',
+ 'PyQt5/Qt/plugins/renderers',
+ [],
+ 'DATA',
+ [('PyQt5/Qt/plugins/renderers/libopenglrenderer.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/renderers/libopenglrenderer.so',
+   'DATA')])

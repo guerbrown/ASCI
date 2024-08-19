@@ -1,16 +1,17 @@
-import subprocess
-import sys
 import os
+import sys
+import subprocess
 
-if __name__ == "__main__":
-    # Get the directory of the executable
-    if getattr(sys, 'frozen', False):
-        application_path = sys._MEIPASS
-    else:
-        application_path = os.path.dirname(os.path.abspath(__file__))
+if getattr(sys, 'frozen', False):
+    # We are running in a PyInstaller bundle
+    bundle_dir = sys._MEIPASS
+else:
+    # We are running in a normal Python environment
+    bundle_dir = os.path.dirname(os.path.abspath(__file__))
 
-    # Path to the ASCI executable
-    asci_path = os.path.join(application_path, 'ASCI')
+# Set the PATH to include the bundled executables
+os.environ['PATH'] = os.path.join(bundle_dir, 'mamba_env', 'bin') + os.pathsep + os.environ['PATH']
 
-    # Run the ASCI executable
-    subprocess.run([asci_path])
+# Run the ASCI executable
+asci_path = os.path.join(bundle_dir, 'ASCI')
+subprocess.run([asci_path])

@@ -1,0 +1,13 @@
+('/home/guerbrown/software/miniforge3/envs/asci/plugins/sensors',
+ 'PyQt5/Qt/plugins/sensors',
+ [],
+ 'DATA',
+ [('PyQt5/Qt/plugins/sensors/libqtsensors_linuxsys.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/sensors/libqtsensors_linuxsys.so',
+   'DATA'),
+  ('PyQt5/Qt/plugins/sensors/libqtsensors_generic.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/sensors/libqtsensors_generic.so',
+   'DATA'),
+  ('PyQt5/Qt/plugins/sensors/libqtsensors_iio-sensor-proxy.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/sensors/libqtsensors_iio-sensor-proxy.so',
+   'DATA')])

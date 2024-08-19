@@ -1,0 +1,7 @@
+('/home/guerbrown/software/miniforge3/envs/asci/plugins/platformthemes',
+ 'PyQt5/Qt/plugins/platformthemes',
+ [],
+ 'DATA',
+ [('PyQt5/Qt/plugins/platformthemes/libqxdgdesktopportal.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/platformthemes/libqxdgdesktopportal.so',
+   'DATA')])

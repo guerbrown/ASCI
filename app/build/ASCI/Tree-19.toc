@@ -1,0 +1,7 @@
+('/home/guerbrown/software/miniforge3/envs/asci/plugins/renderplugins',
+ 'PyQt5/Qt/plugins/renderplugins',
+ [],
+ 'DATA',
+ [('PyQt5/Qt/plugins/renderplugins/libscene2d.so',
+   '/home/guerbrown/software/miniforge3/envs/asci/plugins/renderplugins/libscene2d.so',
+   'DATA')])

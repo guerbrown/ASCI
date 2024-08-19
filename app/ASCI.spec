@@ -1,7 +1,9 @@
 # -*- mode: python ; coding: utf-8 -*-
-import sys
 import os
+import sys
 from PyQt5 import QtCore
+from PyInstaller.utils.hooks import collect_data_files
+from PyInstaller.building.build_main import Tree
 
 block_cipher = None
 
@@ -17,11 +19,10 @@ a = Analysis(['ASCI_launcher.py'],
                  ('ab1_to_fasta.py', '.'),
                  ('sequence_matcher.py', '.'),
                  ('ASCI', '.'),
-                 # Include the entire Mamba environment
-                 (mamba_env, 'mamba_env')
              ],
-             hiddenimports=['Bio', 'Bio.Seq', 'Bio.SeqIO', 'Bio.Align', 'Bio.Align.AlignInfo'],
+             hiddenimports=['PyQt5.QtCore', 'PyQt5.QtGui', 'PyQt5.QtWidgets'],
              hookspath=[],
+             hooksconfig={},
              runtime_hooks=[],
              excludes=[],
              win_no_prefer_redirects=False,
@@ -29,21 +30,24 @@ a = Analysis(['ASCI_launcher.py'],
              cipher=block_cipher,
              noarchive=False)
 
-# Include Qt plugins
+# Add Qt5 plugins
+qtbase_path = os.path.dirname(QtCore.__file__)
 qt_plugins = [
-    ('platforms', QtCore.QLibraryInfo.location(QtCore.QLibraryInfo.PluginsPath) + '/platforms'),
-    ('platforms/libqxcb.so', QtCore.QLibraryInfo.location(QtCore.QLibraryInfo.PluginsPath) + '/platforms/libqxcb.so')
+    ('platforms', os.path.join(qtbase_path, 'plugins', 'platforms')),
+    ('xcbglintegrations', os.path.join(qtbase_path, 'plugins', 'xcbglintegrations')),
+    ('platformthemes', os.path.join(qtbase_path, 'plugins', 'platformthemes')),
 ]
-a.datas += qt_plugins
+for plugin_name, plugin_path in qt_plugins:
+    if os.path.exists(plugin_path):
+        a.datas += Tree(plugin_path, prefix=os.path.join('PyQt5', 'Qt', 'plugins', plugin_name))
 
-pyz = PYZ(a.pure, a.zipped_data,
-          cipher=block_cipher)
+pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 
 exe = EXE(pyz,
           a.scripts,
           a.binaries,
           a.zipfiles,
-          a.datas,
+          a.datas,  
           [],
           name='ASCI',
           debug=False,
@@ -52,16 +56,8 @@ exe = EXE(pyz,
           upx=True,
           upx_exclude=[],
           runtime_tmpdir=None,
-          console=True )  # Changed to True for debugging
-
-# Modify the ASCI_launcher.py to use the bundled Mamba environment
-with open('ASCI_launcher.py', 'a') as f:
-    f.write('''
-import os
-import sys
-
-# Add the bundled Mamba environment to sys.path
-mamba_env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'mamba_env')
-sys.path.insert(0, mamba_env_path)
-os.environ['PATH'] = mamba_env_path + os.pathsep + os.environ['PATH']
-''')
+          console=True,
+          disable_windowed_traceback=False,
+          target_arch=None,
+          codesign_identity=None,
+          entitlements_file=None )
