@@ -25,6 +25,7 @@ Alignments are created using the Muslce alignment algorithm (Edgar, 2004). Pleas
    ```
    git clone https://github.com/yourusername/ASCI.git
    cd ASCI
+   ./lfs.sh
    ```
 
 2. Set up the Mamba environment and install dependencies:
