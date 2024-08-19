@@ -1,15 +1,16 @@
 ```
-                  _____ _____ _____ _____ 
-                 |  _  |   __|     |     |
-                 |     |__   |   --|  |  |
-                 |__|__|_____|_____|_____|
+                   __    ___   ___   __
+                  / _\  / __) / __) (  )
+                 /    \ \__ \ \__ \  )(
+                 \_/\_/ (___/ (___/ (__)
                  
-         Automated Sanger Consensus Integrator
+         Automated Sanger Consensus Interface
 ```
+# ASCI: Automated Sanger Consensus Interface
 
-# ASCI: Automated Sanger Consensus Integrator
+ASCI is designed to automate the process of creating consensus sequences from Sanger sequencing data. It provides a user-friendly graphical interface for selecting .ab1 files, pairing forward and reverse sequences, and generating consensus sequences.
 
-ASCI is a powerful tool designed to automate the process of creating consensus sequences from Sanger sequencing data. It provides a user-friendly graphical interface for selecting .ab1 files, pairing forward and reverse sequences, and generating consensus sequences.
+Alignments are created using the Muslce alignment algorithm (Edgar, 2004). Please note that this was not designed with custom alignment algorithms in mind but could be adapted if desired. There are no plans to add parameter customization in the future but if there is interest, please open an issue.
 
 ## Features
 
@@ -29,11 +30,11 @@ ASCI is a powerful tool designed to automate the process of creating consensus s
 2. Set up the Mamba environment and install dependencies:
    ```
    # Create and activate the Mamba environment
-   mamba env create -f environment.yml
+   mamba env create -f documentation/environment.yml
    mamba activate asci
 
    # Install additional dependencies
-   pip install -r requirements.txt
+   pip install -r documentation/requirements.txt
    ```
 
 3. Install system dependencies (for Ubuntu/Debian-based systems):
@@ -51,7 +52,7 @@ ASCI is a powerful tool designed to automate the process of creating consensus s
 
 2. Run the ASCI application:
    ```
-   python ASCI_launcher.py
+   ./ASCI
    ```
 
 3. Use the GUI to select your .ab1 files, create pairs, and generate consensus sequences.
@@ -61,18 +62,7 @@ ASCI is a powerful tool designed to automate the process of creating consensus s
 ## Input Data Structure
 
 - .ab1 files: Sanger sequencing output files
-- File naming convention: Files should be named with a common prefix followed by a number and 'F' or 'R' for forward and reverse sequences, respectively (e.g., 'Sample1F.ab1', 'Sample1R.ab1')
-
-## Building the Standalone Application
-
-To create a standalone executable:
-
-1. Ensure you're in the project directory and the Mamba environment is activated.
-2. Run PyInstaller:
-   ```
-   pyinstaller ASCI.spec
-   ```
-3. The standalone executable will be created in the `dist` folder.
+- File naming convention: Files should be named with a common prefix followed by a number and 'F' or 'R' for forward and reverse sequences, respectively (e.g., 'Sample-1F.ab1', 'Sample-1R.ab1')
 
 ## Troubleshooting
 
@@ -88,12 +78,9 @@ For further assistance, please open an issue on the GitHub repository.
 
 Contributions to ASCI are welcome! Please feel free to submit a Pull Request.
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Acknowledgments
 
 - BioPython for sequence handling
 - MUSCLE for sequence alignment
 - PyQt5 for the graphical user interface
+- Claude 3.5 Sonnet for assistance building the C++ application and compiling it
