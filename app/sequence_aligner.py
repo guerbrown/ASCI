@@ -43,27 +43,27 @@ def align_sequences(seq_f, seq_r, output_file):
 
         with open("temp_input.fasta", "w") as temp_file:
             SeqIO.write([seq_f, seq_r_rc], temp_file, "fasta")
-        
-        if muscle_version.startswith("3"):
-            command = [muscle_path, "-in", "temp_input.fasta", "-out", "temp_output.fasta"]
-        else:  # MUSCLE v5 syntax
+
+        if muscle_version.startswith("5"):
             command = [muscle_path, "-align", "temp_input.fasta", "-output", "temp_output.fasta"]
+        else:  # Default to MUSCLE v3 syntax
+            command = [muscle_path, "-in", "temp_input.fasta", "-out", "temp_output.fasta"]
 
         print(f"Running command: {' '.join(command)}")
         process = subprocess.run(command, capture_output=True, text=True)
-        
+
         print(f"MUSCLE stdout: {process.stdout}")
         print(f"MUSCLE stderr: {process.stderr}")
-        
+
         if process.returncode != 0:
             raise Exception(f"MUSCLE alignment failed: {process.stderr}")
 
         align = AlignIO.read("temp_output.fasta", "fasta")
         consensus = calculate_consensus(align)
-        
+
         os.remove("temp_input.fasta")
         os.remove("temp_output.fasta")
-        
+
         return consensus
     except Exception as e:
         print(f"Error during alignment: {str(e)}")

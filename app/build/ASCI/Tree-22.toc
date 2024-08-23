@@ -1,7 +1,0 @@
-('/home/guerbrown/software/miniforge3/envs/asci/plugins/iconengines',
- 'PyQt5/Qt/plugins/iconengines',
- [],
- 'DATA',
- [('PyQt5/Qt/plugins/iconengines/libqsvgicon.so',
-   '/home/guerbrown/software/miniforge3/envs/asci/plugins/iconengines/libqsvgicon.so',
-   'DATA')])

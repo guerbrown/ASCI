@@ -1,7 +1,0 @@
-('/home/guerbrown/software/miniforge3/envs/asci/plugins/playlistformats',
- 'PyQt5/Qt/plugins/playlistformats',
- [],
- 'DATA',
- [('PyQt5/Qt/plugins/playlistformats/libqtmultimedia_m3u.so',
-   '/home/guerbrown/software/miniforge3/envs/asci/plugins/playlistformats/libqtmultimedia_m3u.so',
-   'DATA')])

@@ -140,10 +140,6 @@ DIST          = ../../../software/miniforge3/envs/asci/mkspecs/features/spec_pre
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_openglextensions.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_openglextensions_private.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_packetprotocol_private.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_pdf.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_pdf_private.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_pdfwidgets.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_pdfwidgets_private.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_platformcompositor_support_private.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_positioning.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_positioning_private.pri \
@@ -217,13 +213,6 @@ DIST          = ../../../software/miniforge3/envs/asci/mkspecs/features/spec_pre
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_virtualkeyboard_private.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webchannel.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webchannel_private.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webengine.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webengine_private.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webenginecore.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webenginecore_private.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webenginewidgets.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_websockets.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_websockets_private.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webview.pri \
@@ -360,10 +349,6 @@ Makefile: ASCI.pro ../../../software/miniforge3/envs/asci/mkspecs/linux-g++/qmak
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_openglextensions.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_openglextensions_private.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_packetprotocol_private.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_pdf.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_pdf_private.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_pdfwidgets.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_pdfwidgets_private.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_platformcompositor_support_private.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_positioning.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_positioning_private.pri \
@@ -437,13 +422,6 @@ Makefile: ASCI.pro ../../../software/miniforge3/envs/asci/mkspecs/linux-g++/qmak
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_virtualkeyboard_private.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webchannel.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webchannel_private.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webengine.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webengine_private.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webenginecore.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webenginecore_private.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webenginewidgets.pri \
-		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_websockets.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_websockets_private.pri \
 		../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webview.pri \
@@ -570,10 +548,6 @@ Makefile: ASCI.pro ../../../software/miniforge3/envs/asci/mkspecs/linux-g++/qmak
 ../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_openglextensions.pri:
 ../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_openglextensions_private.pri:
 ../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_packetprotocol_private.pri:
-../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_pdf.pri:
-../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_pdf_private.pri:
-../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_pdfwidgets.pri:
-../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_pdfwidgets_private.pri:
 ../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_platformcompositor_support_private.pri:
 ../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_positioning.pri:
 ../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_positioning_private.pri:
@@ -647,13 +621,6 @@ Makefile: ASCI.pro ../../../software/miniforge3/envs/asci/mkspecs/linux-g++/qmak
 ../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_virtualkeyboard_private.pri:
 ../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webchannel.pri:
 ../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webchannel_private.pri:
-../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webengine.pri:
-../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webengine_private.pri:
-../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webenginecore.pri:
-../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webenginecore_private.pri:
-../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri:
-../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webenginewidgets.pri:
-../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webenginewidgets_private.pri:
 ../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_websockets.pri:
 ../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_websockets_private.pri:
 ../../../software/miniforge3/envs/asci/mkspecs/modules/qt_lib_webview.pri:
@@ -917,7 +884,18 @@ main.o: main.cpp ../../../software/miniforge3/envs/asci/include/qt/QtWidgets/QAp
 		../../../software/miniforge3/envs/asci/include/qt/QtCore/QFile \
 		../../../software/miniforge3/envs/asci/include/qt/QtCore/QTextStream \
 		../../../software/miniforge3/envs/asci/include/qt/QtWidgets/QMessageBox \
-		../../../software/miniforge3/envs/asci/include/qt/QtWidgets/qmessagebox.h
+		../../../software/miniforge3/envs/asci/include/qt/QtWidgets/qmessagebox.h \
+		../../../software/miniforge3/envs/asci/include/qt/QtCore/QJsonObject \
+		../../../software/miniforge3/envs/asci/include/qt/QtCore/qjsonobject.h \
+		../../../software/miniforge3/envs/asci/include/qt/QtCore/qjsonvalue.h \
+		../../../software/miniforge3/envs/asci/include/qt/QtCore/qcborvalue.h \
+		../../../software/miniforge3/envs/asci/include/qt/QtCore/qdatetime.h \
+		../../../software/miniforge3/envs/asci/include/qt/QtCore/qcborcommon.h \
+		../../../software/miniforge3/envs/asci/include/qt/QtCore/quuid.h \
+		../../../software/miniforge3/envs/asci/include/qt/QtCore/QJsonDocument \
+		../../../software/miniforge3/envs/asci/include/qt/QtCore/qjsondocument.h \
+		../../../software/miniforge3/envs/asci/include/qt/QtCore/QRegularExpression \
+		../../../software/miniforge3/envs/asci/include/qt/QtCore/QFileInfo
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 ####### Install
